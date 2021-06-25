@@ -1,5 +1,4 @@
 class ColesHelper
-
   def initialize(params = {})
     @file_name = params[:file_name]
     @class_name = params[:class_name]
@@ -16,5 +15,4 @@ class ColesHelper
   def file_and_class_valid?
     file_exists? && class_defined?
   end
-
 end
