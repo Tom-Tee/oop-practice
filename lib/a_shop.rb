@@ -21,5 +21,4 @@ class Coles
   def self_checkout
     "incorrect weight in bagging area"
   end
-
 end

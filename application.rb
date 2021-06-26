@@ -10,3 +10,5 @@ puts a.asciify('Coles')
 puts a.asciify('Project')
 
 view = View.new
+
+
