@@ -5,6 +5,8 @@ begin
 rescue LoadError
 end
 
+let(:coles) { Coles.new }
+
 describe "Shop" do
   it '`a_shop.rb` file should exist' do
     expect(a_shop.file_exists?).to be(true)
@@ -14,6 +16,6 @@ end
 
 describe 'self checkout' do
   it 'should implement a method when going through self checkout' do
-    expect(a_shop).to respond_to :self_checkout
+    expect(coles).to respond_to :self_checkout
   end
 end
