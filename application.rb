@@ -1,7 +1,8 @@
 # system 'clear'
 require 'artii'
 require_relative 'lib/view'
-require 'user'
+require_relative 'lib/user'
+require_relative 'lib/router'
 
 
 a = Artii::Base.new
@@ -17,3 +18,4 @@ user_name = gets.chomp
 puts "------------"
 puts "please enter your password"
 user_password = gets.chomp
+

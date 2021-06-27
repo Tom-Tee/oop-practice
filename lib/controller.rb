@@ -1,4 +1,4 @@
-require 'a_shop'
+require_relative 'a_shop'
 
 class Controller
   def initialize(coles)

@@ -1,4 +1,4 @@
-require 'user'
+require_relative 'user'
 
 class Router
  def initialize(controller)
@@ -13,6 +13,10 @@ class Router
   puts "------------"
   puts "please enter your password"
   user_password = gets.chomp
+  @user = User.new(user_name, user_password)
+ end
+
+ def login_confirm
 
  end
 
