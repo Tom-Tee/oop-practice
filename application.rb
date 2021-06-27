@@ -3,6 +3,7 @@ require 'artii'
 require_relative 'lib/view'
 require_relative 'lib/user'
 require_relative 'lib/router'
+require_relative 'lib/bank'
 
 
 a = Artii::Base.new
