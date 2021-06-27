@@ -26,10 +26,10 @@ puts a.asciify('Project')
 
 # initialize a new coles
 coles = Coles.new()
-
-# initialize order_controller
+bank = Bank.new()
+# initialize coles_controller
 coles_controller = Controller.new(coles)
 # initialize router
 router = Router.new(coles_controller)
 # Start the app
-router.login
+router.run

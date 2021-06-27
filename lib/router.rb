@@ -5,11 +5,12 @@ class Router
  def initialize(controller)
   @controller = controller
   @running = true
-  @user = "placeholder"
+  # @user = "placeholder"
  end
 
  def run
-
+  login
+  login_confirm(login)
  end
 
  def login
@@ -24,7 +25,7 @@ class Router
   login_confirm
  end
 
-def login_confirm
+def login_confirm(user)
   puts "------------"
   puts "WELCOME to COLES #{@user.user}!"
   puts "Your password is #{@user.hide_password}"
