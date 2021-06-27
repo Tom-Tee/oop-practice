@@ -1,5 +1,5 @@
 class User
-  attr_reader :user, :password
+  attr_reader :user
   def initialize(user, password)
     @user = user
     @password = password
@@ -8,6 +8,8 @@ class User
   private
 
   def hide_password
+    lgth = @password.split("")
 
+    "#{lgth.first}"
   end
 end

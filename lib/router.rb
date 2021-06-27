@@ -16,8 +16,14 @@ class Router
   @user = User.new(user_name, user_password)
  end
 
- def login_confirm
+ def password_redo
 
+ end
+
+ def login_confirm
+  puts "------------"
+  puts "WELCOME to COLES #{@user.name}!"
+  puts "Your password is #{@user.password_redo}"
  end
 
   def stop
