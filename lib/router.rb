@@ -1,10 +1,19 @@
 require_relative 'user'
+require 'pry'
 
 class Router
  def initialize(controller)
   @controller = controller
   @running = true
+  @user = "placeholder"
  end
+
+def login_confirm
+  puts "------------"
+  puts "WELCOME to COLES #{@user.name}!"
+  puts "Your password is #{@user.hide_password}"
+ end
+
 
  def login
   puts "------------"
@@ -12,19 +21,19 @@ class Router
   user_name = gets.chomp
   puts "------------"
   puts "please enter your password"
+    binding.pry
   user_password = gets.chomp
+
   @user = User.new(user_name, user_password)
+  login_confirm
  end
 
- def password_redo
 
- end
-
- def login_confirm
-  puts "------------"
-  puts "WELCOME to COLES #{@user.name}!"
-  puts "Your password is #{@user.password_redo}"
- end
+ # def login_confirm
+ #  puts "------------"
+ #  puts "WELCOME to COLES #{@user.name}!"
+ #  puts "Your password is #{@user.hide_password}"
+ # end
 
   def stop
     @running = false

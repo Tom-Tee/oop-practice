@@ -8,8 +8,11 @@ class User
   private
 
   def hide_password
-    lgth = @password.split("")
-
-    "#{lgth.first}"
+    split = @password.split("")
+    a = []
+    (@password.length - 2).times { a << "*"}
+    a << "#{lgth.last}"
+    a.unshift("#{split.first}")
+    a.join("")
   end
 end
