@@ -5,13 +5,11 @@ class User
     @password = password
   end
 
-  private
-
   def hide_password
     split = @password.split("")
     a = []
     (@password.length - 2).times { a << "*"}
-    a << "#{lgth.last}"
+    a << "#{split.last}"
     a.unshift("#{split.first}")
     a.join("")
   end

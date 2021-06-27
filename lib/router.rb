@@ -8,12 +8,9 @@ class Router
   @user = "placeholder"
  end
 
-def login_confirm
-  puts "------------"
-  puts "WELCOME to COLES #{@user.name}!"
-  puts "Your password is #{@user.hide_password}"
- end
+ def run
 
+ end
 
  def login
   puts "------------"
@@ -21,11 +18,16 @@ def login_confirm
   user_name = gets.chomp
   puts "------------"
   puts "please enter your password"
-    binding.pry
   user_password = gets.chomp
 
   @user = User.new(user_name, user_password)
   login_confirm
+ end
+
+def login_confirm
+  puts "------------"
+  puts "WELCOME to COLES #{@user.user}!"
+  puts "Your password is #{@user.hide_password}"
  end
 
 
